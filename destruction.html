@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latihan Destruction</title>
+</head>
+<body>
+    <script>
+
+        //Contoh Array
+        const namaHari = ['Senin','Selasa','Rabu','Kamis','Jumat','Sabtu','Minggu'];
+       
+        const hari1 = namaHari[0];
+        const hari4 = namaHari[3]
+        const hari5 = namaHari[4];
+        console.log(hari1, hari4, hari5); 
+
+        //Destructuring Array
+        const [a, , c, d, e, ...lainnya] = namaHari;
+        console.log(a, c, d, e, lainnya); 
+
+
+        //Contoh Object
+        const mahasiswa = {
+          nim: 19011552,
+          nama: 'Fajriatun Munawaroh',
+          prodi: 'Manajemen Informatika',
+          jenis_kelamin: 'Perempuan',
+          alamat: 'Kendal, Jawa Tengah',
+          telp: 085336154384,
+          email: 'fajriatun072@gmail.com'
+        }
+
+        const namaMhs = mahasiswa.nama;
+        const nimMhs = mahasiswa.nim;
+        const telpMhs = mahasiswa.telp;
+        console.log(namaMhs, nimMhs, telpMhs); 
+
+        // Destructuring Object
+        const {nim, nama, prodi, alamat, ...lainnya} = mahasiswa;
+        console.log(nim, nama, prodi, alamat, lainnya);
+
+        //Destructuring function  
+        function perkalian([a, b]) {
+          const perkalian = a * b;
+          const pesan = `Hasil perkalian kedua bilangan adalah ${perkalian}`;
+          console.log(pesan); 
+        } 
+        perkalian([4, 5]);
+
+        //Destructuring function  
+        const mahasiswa = {
+          nim: 19011552,
+          nama: 'Fajriatun Munawaroh',
+          prodi: 'Manajemen Informatika',
+          jenis_kelamin: 'Perempuan',
+          alamat: 'Kendal, Jawa Tengah',
+          telp: 085336154384,
+          email: 'fajriatun072@gmail.com'
+        }        
+          function cetakMhs({nama, prodi}){
+            return 'Halo, nama saya '+nama+', saya dari prodi '+prodi;   
+        }
+        console.log(cetakMhs(mahasiswa));
+       
+        
+    </script>
+</body>
+</html>
