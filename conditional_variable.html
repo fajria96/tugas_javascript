@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Conditional Variable</title>
+</head>
+<body>
+    <script>
+
+        //Latihan conditional variable => Mencari angka lebih besar dari 2
+
+        const angka = [2, -3, 7, 3, 9, 6, 5, -4, -1];
+
+        const cariAngka = [];
+        for (let i = 0; i < angka.length; i++) {
+            if (angka[i] > 2) {
+                cariAngka.push(angka[i]);
+                } 
+            }
+
+            console.log(cariAngka);
+
+
+        //Latihan Map => Mengalikan semua angka dengan 3
+
+        const angka = [2, -3, 7, 3, 9, 6, 5, -4, -1];
+        
+            const kaliAngka = angka.map(a => a * 3);
+            console.log(kaliAngka); 
+
+
+        //Latihan Filter => Mencari angka lebih besar dari -3
+
+        const angka = [2, -3, 7, 3, 9, 6, 5, -4, -1];
+            
+            const cariAngka = angka.filter(b => b > -3);
+            console.log(cariAngka); 
+
+    </script>
+</body>
+</html>
